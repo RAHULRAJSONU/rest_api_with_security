@@ -7,7 +7,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-import pl.cyfronet.indigo.bean.Affiliation;
 import pl.cyfronet.indigo.bean.Role;
 import pl.cyfronet.indigo.bean.Team;
 import pl.cyfronet.indigo.bean.User;
@@ -22,13 +21,10 @@ public class AuthenticationMocks {
     public static Authentication userAuthentication(Long id) {
         Team team = new Team();
         team.setName("test");
-        Affiliation affiliation = new Affiliation();
-        affiliation.setStatus("ACTIVE");
         Role role = new Role();
         role.setName("manager");
-        User user = User.builder().id(id).name("user").teams(Arrays.asList(team)).affiliations(Arrays.asList(affiliation)).roles(Arrays.asList(role)).build();
+        User user = User.builder().id(id).name("user").teams(Arrays.asList(team)).roles(Arrays.asList(role)).build();
         team.setMembers(Arrays.asList(user));
-        affiliation.setOwner(user);
         role.setUsers(Arrays.asList(user));
         List<GrantedAuthority> auth = Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
         PortalUser pu = PortalUser.builder().principal(UserInfo.fromUser(user)).user(user).authorities(auth).isAuthenticated(true).build();

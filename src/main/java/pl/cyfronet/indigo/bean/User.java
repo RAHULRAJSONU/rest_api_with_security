@@ -42,10 +42,6 @@ public class User {
     private boolean hasActiveSla;
     
     @JsonIgnore
-    @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
-    private List<Affiliation> affiliations;
-    
-    @JsonIgnore
     @ManyToMany(mappedBy="members")
     private List<Team> teams;
 

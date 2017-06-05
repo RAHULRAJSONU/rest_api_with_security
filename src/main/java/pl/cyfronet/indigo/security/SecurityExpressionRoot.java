@@ -4,9 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 
-import pl.cyfronet.indigo.bean.Affiliation;
 import pl.cyfronet.indigo.bean.User;
-import pl.cyfronet.indigo.security.bean.AffiliationSecurity;
 import pl.cyfronet.indigo.security.bean.UserSecurity;
 import pl.cyfronet.indigo.security.policy.Activity;
 import pl.cyfronet.indigo.security.policy.Identity;
@@ -48,17 +46,4 @@ public class SecurityExpressionRoot extends MethodSecurityExpressionRoot {
                     new UserSecurity(targetObject), activity).evaluate();
         }
     }
-
-    public boolean checkPolicyAffiliation(Affiliation targetObject,
-            Activity activity) {
-        logger.debug("authorize affiliation access: " + activity);
-        if (targetObject == null) {
-            // allow spring to return 404 instead of 403
-            return true;
-        } else {
-            return permissions.securityPolicy(identity,
-                    new AffiliationSecurity(targetObject), activity).evaluate();
-        }
-    }
-
 }
