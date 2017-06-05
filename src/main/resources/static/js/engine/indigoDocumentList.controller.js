@@ -1,5 +1,5 @@
 angular.module('indigo').controller('indigoDocumentListCtrl', function ($scope, $filter, $timeout, setDocumentsWeights) {
-    console.log('hello from indigo!');
+    // console.log('hello from indigo!');
 
     $scope.documents.$promise.then(function () {
         $scope.documents.sort(function (a, b) {
@@ -46,7 +46,7 @@ angular.module('indigo').controller('indigoDocumentListCtrl', function ($scope, 
         if (document.dropindex == null)
             return;
 
-        console.log("reapplying");
+        // console.log("reapplying");
 
         var di = document.dropindex;
         if (separate) {
@@ -89,7 +89,7 @@ angular.module('indigo').controller('indigoDocumentListCtrl', function ($scope, 
             ui.item.sortable.model.document.originalWeight = ui.item.sortable.model.document.weight;
         },
         sort: function (event, ui) {
-            console.log(event.originalEvent.pageX - clientPosX);
+            // console.log(event.originalEvent.pageX - clientPosX);
 
             if (event.originalEvent.pageX - clientPosX < -20) {
                 // console.log(ui.item.sortable.model.document.weight);
@@ -118,7 +118,7 @@ angular.module('indigo').controller('indigoDocumentListCtrl', function ($scope, 
         stop: function (event, ui) {
             ui.item.sortable.model.document.dropindex = ui.item.sortable.dropindex != null ? ui.item.sortable.dropindex : ui.item.sortable.index;
 
-            console.log(ui.item.sortable.dropindex);
+            // console.log(ui.item.sortable.dropindex);
 
             var document = ui.item.sortable.model.document;
 

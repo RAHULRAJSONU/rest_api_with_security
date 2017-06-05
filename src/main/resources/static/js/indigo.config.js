@@ -11,10 +11,8 @@ angular.module('indigo', ['ngRoute',
     'ui.sortable',
     'engine',
     //application modules
-    'indigo.components.header',
-    // 'indigo.dashboard',
-    // 'indigo.profile',
-    'indigo.constants' //this module is dynamically generated in index.html
+    //this module is dynamically generated in index.html
+    'indigo.constants'
 ]);
 
 angular.module('indigo').config(function (toastrConfig) {
