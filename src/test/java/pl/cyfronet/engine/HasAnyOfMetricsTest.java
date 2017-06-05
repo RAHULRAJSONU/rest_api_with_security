@@ -1,4 +1,4 @@
-package pl.cyfronet.bazaar;
+package pl.cyfronet.engine;
 
 import pl.cyfronet.engine.constraint.action.definition.HasAnyOfMetrics;
 

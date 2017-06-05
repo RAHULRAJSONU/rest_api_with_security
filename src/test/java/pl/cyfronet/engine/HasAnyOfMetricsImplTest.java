@@ -1,4 +1,4 @@
-package pl.cyfronet.bazaar;
+package pl.cyfronet.engine;
 
 import java.util.Arrays;
 import java.util.HashMap;

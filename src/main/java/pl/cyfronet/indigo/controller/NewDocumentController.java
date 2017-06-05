@@ -1,4 +1,4 @@
-package pl.cyfronet.indigo.controller.bazaar;
+package pl.cyfronet.indigo.controller;
 
 import com.agreemount.engine.facade.QueryFacade;
 import com.agreemount.engine.facade.MetricFacade;

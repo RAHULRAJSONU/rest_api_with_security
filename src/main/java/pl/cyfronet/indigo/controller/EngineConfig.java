@@ -1,4 +1,4 @@
-package pl.cyfronet.indigo.controller.bazaar;
+package pl.cyfronet.indigo.controller;
 
 import com.agreemount.slaneg.action.ActionContext;
 import com.agreemount.slaneg.action.ActionContextFactory;
@@ -18,21 +18,21 @@ import pl.cyfronet.engine.rules.GenericYamlProvider;
  */
 @Configuration
 @EnableAutoConfiguration
-@PropertySources({ @PropertySource("classpath:bazaar.properties"),
-        @PropertySource("classpath:mongo.properties") })
+@PropertySources({@PropertySource("classpath:engine.properties"),
+        @PropertySource("classpath:mongo.properties")})
 @ComponentScan(
-        basePackages = {"pl.cyfronet.bazaar, com.agreemount"},
+        basePackages = {"pl.cyfronet.engine, com.agreemount"},
         excludeFilters = {
                 @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE,
                         value = FileRulesProvidersConfiguration.class)
         }
 )
-public class BazaarConfig {
+public class EngineConfig {
 
     @Autowired
     @Qualifier("queriesYamlProvider")
     private GenericYamlProvider<Query> queriesYamlProvider;
-    
+
     @Value("${engine.dummyLogin}")
     private String dummyLogin;
 
@@ -40,7 +40,7 @@ public class BazaarConfig {
     public String dummyLogin() {
         return dummyLogin;
     }
-    
+
     @Bean(name = "identitiesYamlProvider")
     public GenericYamlProvider<Identity> metricGenericYamlProvider() {
         return new GenericYamlProvider<>("identities");

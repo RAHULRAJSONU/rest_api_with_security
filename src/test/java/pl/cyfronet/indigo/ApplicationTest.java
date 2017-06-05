@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySources;
 @ComponentScan
 @EnableAutoConfiguration
 @PropertySources({
-        @PropertySource("classpath:bazaar.test.properties"),
+        @PropertySource("classpath:engine.test.properties"),
         @PropertySource("classpath:mongo.test.properties")
 })
 public class ApplicationTest{
