@@ -20,7 +20,7 @@ import java.io.IOException;
 
 @Controller
 @Log4j
-public class LegacyMethods {
+public class LegacyController {
 
     @Autowired
     private UserRepository userRepository;
