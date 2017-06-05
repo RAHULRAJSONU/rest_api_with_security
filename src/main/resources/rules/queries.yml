@@ -35,7 +35,7 @@ queries:
     position: 2
     queryCategoryId: userDashboard
     visibilityConstraint:
-#      !pl.cyfronet.bazaar.engine.extension.constraint.action.definition.IsSiteAdmin
+#      !pl.cyfronet.engine.constraint.action.definition.IsSiteAdmin
 #          role: provider
 #      !com.agreemount.slaneg.constraint.action.definition.Operator
 #        type: OR
@@ -99,7 +99,7 @@ queries:
         children:
         - !com.agreemount.slaneg.constraint.action.definition.HasRoleDef
           role: provider
-#        - !pl.cyfronet.bazaar.engine.extension.constraint.action.definition.IsSiteAdmin
+#        - !pl.cyfronet.engine.constraint.action.definition.IsSiteAdmin
 #          role: provider
     constraint: #dla jakich dokumentow ma byc widoczna ta kwerenda
       !com.agreemount.slaneg.constraint.query.definition.Operator

@@ -6,8 +6,8 @@ import java.util.HashMap;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import pl.cyfronet.bazaar.engine.extension.constraint.action.definition.HasAnyOfMetrics;
-import pl.cyfronet.bazaar.engine.extension.constraint.action.impl.HasAnyOfMetricsImpl;
+import pl.cyfronet.engine.constraint.action.definition.HasAnyOfMetrics;
+import pl.cyfronet.engine.constraint.action.impl.HasAnyOfMetricsImpl;
 
 import com.agreemount.bean.document.Document;
 import com.agreemount.slaneg.action.ActionContext;

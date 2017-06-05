@@ -4,9 +4,10 @@ import com.agreemount.bean.document.Document;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.security.core.context.SecurityContextHolder;
-import pl.cyfronet.ltos.bean.DocumentWeight;
-import pl.cyfronet.ltos.bean.DocumentWeightPk;
-import pl.cyfronet.ltos.security.PortalUser;
+import pl.cyfronet.engine.bean.SpringContext;
+import pl.cyfronet.indigo.bean.DocumentWeight;
+import pl.cyfronet.indigo.bean.DocumentWeightPk;
+import pl.cyfronet.indigo.security.PortalUser;
 
 import java.util.Arrays;
 import java.util.List;

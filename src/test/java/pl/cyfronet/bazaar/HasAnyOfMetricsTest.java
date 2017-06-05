@@ -1,6 +1,6 @@
 package pl.cyfronet.bazaar;
 
-import pl.cyfronet.bazaar.engine.extension.constraint.action.definition.HasAnyOfMetrics;
+import pl.cyfronet.engine.constraint.action.definition.HasAnyOfMetrics;
 
 import org.junit.Test;
 import org.junit.Assert;

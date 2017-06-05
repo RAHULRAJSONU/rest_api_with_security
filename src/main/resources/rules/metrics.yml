@@ -88,7 +88,7 @@ metrics:
 #            state: documentType
 #            value: sla
 
-  - !pl.cyfronet.bazaar.engine.extension.metric.SiteSelectMetric
+  - !pl.cyfronet.engine.metric.SiteSelectMetric
     id: siteStorageSelect
     label: Site
     categoryId: computingTimeRestrictions
